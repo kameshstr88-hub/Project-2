@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Text Limit Tracker</title>
+
+<style>
+    body {
+        font-family: Verdana, sans-serif;
+        padding: 40px;
+        background-color:#aaa
+    }
+
+    textarea {
+        background-color:rgba(255, 255, 255, 0.575);
+        width: 100%;
+        height: 150px;
+        padding: 20px;
+        font-size: 16px;
+        resize: none;
+        border: 1px solid #aaa;
+    }
+
+    .info {
+        margin-top: 8px;
+        font-size: 14px;
+        color:black;
+    }
+
+    .alert {
+        color: crimson;
+        font-weight: bold;
+        margin-top: 6px;
+        visibility: hidden;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>Type Your Thoughts</h2>
+
+<textarea id="textBox" maxlength="200" placeholder="Start typing here..."></textarea>
+
+<div class="info" id="infoText">
+    200 characters remaining
+</div>
+
+<div class="alert" id="alertText">
+    ⚠ You have reached the maximum limit
+</div>
+
+<script>
+    const textBox = document.getElementById("textBox");
+    const infoText = document.getElementById("infoText");
+    const alertText = document.getElementById("alertText");
+    const limit = 200;
+
+    textBox.addEventListener("keyup", function () {
+        let currentLength = textBox.value.length;
+        let leftChars = limit - currentLength;
+
+        infoText.textContent = leftChars + " characters remaining";
+
+        if (leftChars == 0) {
+            alertText.style.visibility = "visible";
+        } else {
+            alertText.style.visibility = "hidden";
+        }
+    });
+</script>
+
+</body>
+</html>

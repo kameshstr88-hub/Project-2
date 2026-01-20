@@ -1,0 +1,45 @@
+.container1{
+    border: black 1px solid;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big_table{
+    border: black 1px solid;
+}
+.row_content button{
+    width: 100%;
+    display: block;
+    background-color: greenyellow;
+ 
+}
+.table_content{
+    border: 1px black solid;
+     padding: 10px;
+}
+.table_heading{
+     border: 1px black solid;
+     padding: 10px;
+}
+
+.container2{
+    margin-top: 20px;
+   
+}
+
+.sub_headings{
+    padding: 10px;
+    border: black solid 1px;
+}
+.small_table{
+     border: black solid 1px;
+}
+
+.small_table th,
+.small_table td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;           
+}
