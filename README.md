@@ -17,6 +17,9 @@ The objective of this project is to demonstrate:
 
 ---
 
+## How to view
+You can view with this link [https://kameshstr88-hub.github.io/Project-2/]
+
 ## Application Description
 
 The application contains a textarea with a fixed maximum character limit.  
@@ -54,4 +57,3 @@ When the character limit is reached, a warning message is shown to inform the us
 
 ---
 
-## Project Structure
